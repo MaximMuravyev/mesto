@@ -1,4 +1,4 @@
-.profile__add-button{
+.profiles__add-button{
   width: 150px;
   height: 50px;
   background-color: black;
@@ -13,7 +13,7 @@
   transition: 0.5s linear;
 }
 
-.profile__add-button:hover{
+.profiles__add-button:hover{
   opacity: 0.6;
 }
 
