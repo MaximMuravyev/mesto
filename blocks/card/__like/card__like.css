@@ -5,6 +5,11 @@
   height: 19px;
   cursor: pointer;
   transition: 0.5s linear;
+  background-size: 22px 19px;
+  background-image: url(../../../images/Like.svg);
+  border-width: 0;
+  background-position: center;
+  background-repeat:no-repeat;
 }
 
 .card__like:hover{

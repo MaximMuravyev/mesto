@@ -19,6 +19,6 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url("./Inter/inter-v3-latin-500.woff2") format("woff2"), url("./Inter/inter-v3-latin-500.woff") format("woff");
+  src: url("./Inter/Inter-Medium.woff2") format("woff2"), url("./Inter/Inter-Medium.woff") format("woff");
 }
 

@@ -3,30 +3,25 @@ let closeButton = document.querySelector('.popup__close');
 let editButton = document.querySelector('.profile__edit-button');
 let formButton = document.querySelector('.popup__button');
 let form = document.querySelector('.popup__form');
-let inputName = document.querySelector('.popup__input_name');
+let inputName = document.querySelector('.popup__input_type_name');
 let profileName = document.querySelector('.profile__name');
-let inputJob = document.querySelector('.popup__input_job');
+let inputJob = document.querySelector('.popup__input_type_job');
 let profileJob = document.querySelector('.profile__job');
 
 function openPopup() {
-  popup.classList.add('popup_isOpen')
+  popup.classList.add('popup_is-open')
   inputName.value = profileName.textContent;
   inputJob.value = profileJob.textContent;
 }
 
 function closePopup() {
-  popup.classList.remove('popup_isOpen')
+  popup.classList.remove('popup_is-open')
 }
 
-editButton.addEventListener('click', openPopup);
-closeButton.addEventListener('click', closePopup);
-
-function clearInputName(event) {
-  inputName.value = '';
-}
-
-function clearInputJob(event) {
-  inputJob.value = '';
+function popupClickClose(event) {
+  if (event.target.classList.contains('popup')) {
+    closePopup()
+  }
 }
 
 function submitForm(event) {
@@ -36,13 +31,7 @@ function submitForm(event) {
   closePopup();
 }
 
-function popupClickClose(event) {
-  if (event.target.classList.contains('popup')) {
-    closePopup()
-  }
-}
-
-inputName.addEventListener('click', clearInputName);
-inputJob.addEventListener('click', clearInputJob);
+editButton.addEventListener('click', openPopup);
+closeButton.addEventListener('click', closePopup);
 popup.addEventListener('mouseup', popupClickClose);
 form.addEventListener('submit', submitForm);
