@@ -20,12 +20,12 @@
         <div class="profile__info">
           <div class="profile__name-content">
             <h1 class="profile__name">Жак-Ив Кусто</h1>
-            <button type="button" aria-label="Edit" class="profile__edit-button"></button>
+            <button type="button" aria-label="Редактировать" class="profile__edit-button"></button>
           </div>
           <p class="profile__job">Исследователь океана</p>
         </div>
       </div>
-      <button type="button" aria-label="Add" class="profiles__add-button"></button>
+      <button type="button" aria-label="Добавить" class="profiles__add-button"></button>
     </section>
     <section class="cards-list">
       <ul class="cards">
@@ -81,12 +81,12 @@
 
   <div class="popup">
     <div class="popup__container">
-      <button type="reset" aria-label="Close" class="popup__close"></button>
+      <button type="button" aria-label="Закрыть" class="popup__close"></button>
       <h3 class="popup__title">Редактировать профиль</h3>
       <form action="/sendForm" name="profile-info" class="popup__form">
         <input type="text" name="profile-name" class="popup__input popup__input_type_name">
         <input type="text" name="profile-job" class="popup__input popup__input_type_job">
-        <button type="submit" class="popup__button">Сохранить</button>
+        <button type="submit" aria-label="Отправить" class="popup__button">Сохранить</button>
       </form>
     </div>
   </div>
