@@ -54,14 +54,15 @@
       <h3 class="popup__title">Новое место</h3>
       <form action="/sendForm" name="place-info" class="popup__form popup_form_add">
         <input type="text" name="place-name" class="popup__input popup__input_type_place" placeholder="Название">
-        <input type="text" name="place-link" class="popup__input popup__input_type_link" placeholder="Ссылка на картинку">
+        <input type="text" name="place-link" class="popup__input popup__input_type_link"
+          placeholder="Ссылка на картинку">
         <button type="submit" aria-label="Отправить" class="popup__button">Создать</button>
       </form>
     </div>
   </div>
   <div class="popup popup_card-open">
     <div class="popup__card-container">
-      <img class="popup__open-img" src="./images/Image (1).png" alt="Место">
+      <img class="popup__open-img" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg" alt="Локация">
       <h3 class="popup__open-title">Карачаевск</h3>
       <button type="button" aria-label="Закрыть" class="popup__close popup_close-card"></button>
     </div>
@@ -69,7 +70,8 @@
 
   <template class="template">
     <li class="card">
-      <img class="card__image" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg" alt="Карачаевск">
+      <img class="card__image" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg"
+        alt="Карачаевск">
       <div class="card__string">
         <h2 class="card__title">Карачаевск</h2>
         <button type="button" class="card__like"></button>
