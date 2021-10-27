@@ -29,48 +29,6 @@
     </section>
     <section class="cards-list">
       <ul class="cards">
-        <li class="card">
-          <img class="card__image" src="./images/Karachaevsk.png" alt="Карачаевск">
-          <div class="card__string">
-            <h2 class="card__title">Карачаевск</h2>
-            <button type="button" class="card__like"></button>
-          </div>
-        </li>
-        <li class="card">
-          <img class="card__image" src="./images/Elbrus.png" alt="Гора Эльбрус">
-          <div class="card__string">
-            <h2 class="card__title">Гора Эльбрус</h2>
-            <button type="button" class="card__like"></button>
-          </div>
-        </li>
-        <li class="card">
-          <img class="card__image" src="./images/Dombai.png" alt="Домбай">
-          <div class="card__string">
-            <h2 class="card__title">Домбай</h2>
-            <button type="button" class="card__like"></button>
-          </div>
-        </li>
-        <li class="card">
-          <img class="card__image" src="./images/Elbrus.png" alt="Гора Эльбрус">
-          <div class="card__string">
-            <h2 class="card__title">Гора Эльбрус</h2>
-            <button type="button" class="card__like"></button>
-          </div>
-        </li>
-        <li class="card">
-          <img class="card__image" src="./images/Dombai.png" alt="Домбай">
-          <div class="card__string">
-            <h2 class="card__title">Домбай</h2>
-            <button type="button" class="card__like"></button>
-          </div>
-        </li>
-        <li class="card">
-          <img class="card__image" src="./images/Karachaevsk.png" alt="Карачаево-Черкесия">
-          <div class="card__string">
-            <h2 class="card__title">Карачаево-Черкесия</h2>
-            <button type="button" class="card__like"></button>
-          </div>
-        </li>
       </ul>
     </section>
   </main>
@@ -79,17 +37,46 @@
     <p class="footer__info">© 2020 Mesto Russia</p>
   </footer>
 
-  <div class="popup">
+  <div class="popup popup_profile_edit">
     <div class="popup__container">
       <button type="button" aria-label="Закрыть" class="popup__close"></button>
       <h3 class="popup__title">Редактировать профиль</h3>
-      <form action="/sendForm" name="profile-info" class="popup__form">
+      <form action="/sendForm" name="profile-info" class="popup__form popup_form_edit">
         <input type="text" name="profile-name" class="popup__input popup__input_type_name">
         <input type="text" name="profile-job" class="popup__input popup__input_type_job">
         <button type="submit" aria-label="Отправить" class="popup__button">Сохранить</button>
       </form>
     </div>
   </div>
+  <div class="popup popup_card_add">
+    <div class="popup__container">
+      <button type="button" aria-label="Закрыть" class="popup__close popup_close_add"></button>
+      <h3 class="popup__title">Новое место</h3>
+      <form action="/sendForm" name="place-info" class="popup__form popup_form_add">
+        <input type="text" name="place-name" class="popup__input popup__input_type_place" placeholder="Название">
+        <input type="text" name="place-link" class="popup__input popup__input_type_link" placeholder="Ссылка на картинку">
+        <button type="submit" aria-label="Отправить" class="popup__button">Создать</button>
+      </form>
+    </div>
+  </div>
+  <div class="popup popup_card-open">
+    <div class="popup__card-container">
+      <img class="popup__open-img" src="./images/Image (1).png" alt="Место">
+      <h3 class="popup__open-title">Карачаевск</h3>
+      <button type="button" aria-label="Закрыть" class="popup__close popup_close-card"></button>
+    </div>
+  </div>
+
+  <template class="template">
+    <li class="card">
+      <img class="card__image" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg" alt="Карачаевск">
+      <div class="card__string">
+        <h2 class="card__title">Карачаевск</h2>
+        <button type="button" class="card__like"></button>
+      </div>
+      <button type="reset" aria-label="Удалить" class="card__recycle"></button>
+    </li>
+  </template>
   <script src="./scripts/index.js"></script>
 </body>
 
