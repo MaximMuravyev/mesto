@@ -71,6 +71,16 @@ function createCard(item) {
   return card;
 }
 
+function enableTransition(element){
+  element.classList.remove('popup_transition-disable');
+}
+
+window.onload = function() {
+  enableTransition(popup);
+  enableTransition(popupCard);
+  enableTransition(popupCardImg);
+}
+
 function appendCard(item) {
   const card = createCard(item);
   cards.prepend(card);
@@ -143,6 +153,7 @@ function submitFormAdd(event) {
   appendCard(item);
   closePopupCard();
 }
+
 
 editButton.addEventListener('click', openPopupEdit);
 addButton.addEventListener('click', openPopupCard);
