@@ -41,10 +41,14 @@
     <div class="popup__container">
       <button type="button" aria-label="Закрыть" class="popup__close popup__close_edit_profile"></button>
       <h3 class="popup__title">Редактировать профиль</h3>
-      <form action="/sendForm" name="profile-info" class="popup__form popup__form_edit_profile">
-        <input type="text" name="profile-name" class="popup__input popup__input_type_name">
-        <input type="text" name="profile-job" class="popup__input popup__input_type_job">
-        <button type="submit" aria-label="Отправить" class="popup__button">Сохранить</button>
+      <form action="/sendForm" name="profile-info" class="popup__form popup__form_edit_profile" novalidate>
+        <input id="name-profile" required minlength="2" maxlength="40" autocomplete="off" type="text"
+          name="profile-name" class="popup__input popup__input_type_name" />
+        <span id="name-profile-error" class="popup__error"></span>
+        <input id="job-profile" required minlength="2" maxlength="200" autocomplete="off" type="text" name="profile-job"
+          class="popup__input popup__input_type_job" />
+        <span id="job-profile-error" class="popup__error"></span>
+        <button type="submit" aria-label="Отправить" class="popup__button popup__button_profile">Сохранить</button>
       </form>
     </div>
   </div>
@@ -52,17 +56,21 @@
     <div class="popup__container">
       <button type="button" aria-label="Закрыть" class="popup__close popup__close_add_place"></button>
       <h3 class="popup__title">Новое место</h3>
-      <form action="/sendForm" name="place-info" class="popup__form popup__form_add_place">
-        <input type="text" name="place-name" class="popup__input popup__input_type_place" placeholder="Название">
-        <input type="text" name="place-link" class="popup__input popup__input_type_link"
-          placeholder="Ссылка на картинку">
-        <button type="submit" aria-label="Отправить" class="popup__button">Создать</button>
+      <form action="/sendForm" name="place-info" class="popup__form popup__form_add_place" novalidate>
+        <input id="name-place" required minlength="2" autocomplete="off" maxlength="30" type="text" name="place-name"
+          class="popup__input popup__input_type_place" placeholder="Название" />
+        <span id="name-place-error" class="popup__error"></span>
+        <input id="url-place" required type="url" autocomplete="off" name="place-link"
+          class="popup__input popup__input_type_link" placeholder="Ссылка на картинку" />
+        <span id="url-place-error" class="popup__error"></span>
+        <button type="submit" aria-label="Отправить" class="popup__button popup__button_place">Создать</button>
       </form>
     </div>
   </div>
   <div class="popup popup_card-open popup_transition-disable">
     <div class="popup__card-container">
-      <img class="popup__open-img" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg" alt="Локация">
+      <img class="popup__open-img" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg"
+        alt="Локация">
       <h3 class="popup__open-title">Байкал</h3>
       <button type="button" aria-label="Закрыть" class="popup__close popup__close_open_card"></button>
     </div>
@@ -79,6 +87,7 @@
       <button type="reset" aria-label="Удалить" class="card__recycle"></button>
     </li>
   </template>
+  <script src="./scripts/validate.js"></script>
   <script src="./scripts/index.js"></script>
 </body>
 
