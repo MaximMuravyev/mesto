@@ -34,10 +34,21 @@ function handleSubmit(event) {
   event.preventDefault();
 }
 
+function enableSubmitButton(item, config){
+  item.classList.remove(config.submitButtonErrorClass);
+}
+
+function disableSubmitButton(item, config){
+  item.classList.add(config.submitButtonErrorClass);
+}
+
 function setSubmitButtonState(form, config) {
   const button = form.querySelector(config.submitButtonSelector);
-  button.disabled = !form.checkValidity();
-  button.classList.toggle(config.submitButtonErrorClass, !form.checkValidity());
+  if (button.disabled = !form.checkValidity()) {
+    disableSubmitButton(button, config);
+  } else {
+    enableSubmitButton(button, config);
+  }
 }
 
 function handleFieldValidadion(inputElement, form, config) {
