@@ -64,7 +64,6 @@ function createCard(item) {
     card.remove();
   });
 
-
   card.querySelector('.card__image').addEventListener('click', () => {
     titleOpen.innerText = item.name;
     imgOpen.setAttribute('src', item.link);
