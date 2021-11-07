@@ -49,8 +49,6 @@ const titleOpen = document.querySelector('.popup__open-title');
 const popups = document.querySelectorAll('.popup');
 const buttonSubmitPlace = document.querySelector('.popup__button_place');
 const buttonSubmitProfile = document.querySelector('.popup__button_profile');
-const inputs = document.querySelectorAll('.popup__input');
-const errors = document.querySelectorAll('.popup__error');
 
 initialCards.forEach(renderCard);
 
@@ -76,13 +74,6 @@ function createCard(item) {
   });
 
   return card;
-}
-
-function openImg() {
-  openPopup(cardPopupImg);
-  titleOpen.innerText = item.name;
-  imgOpen.setAttribute('src', item.link);
-  imgOpen.setAttribute('alt', item.name);
 }
 
 function enableTransition(element){
@@ -113,9 +104,8 @@ function closePopup(element) {
 function openPopupCard() {
   openPopup(popupCard);
   disableSubmitButton(buttonSubmitPlace, config);
-  hideError(placeInput, document, config);
-  hideError(linkInput, document, config);
-  buttonSubmitPlace.disabled = true;
+  hideError(placeInput, placeAddForm, config);
+  hideError(linkInput, placeAddForm, config);
   placeInput.value = '';
   linkInput.value = '';
 }
@@ -134,17 +124,12 @@ function enableButton(element) {
 
 function openPopupEdit() {
   openPopup(popupProfile);
-  hideError(nameInput, document, config);
-  hideError(jobInput, document, config);
+  hideError(nameInput, profilePopupForm, config);
+  hideError(jobInput, profilePopupForm, config);
   nameInput.value = profileName.textContent;
   jobInput.value = profileJob.textContent;
-  if (nameInput.value != '' && jobInput.value !='') {
-    enableButton(buttonSubmitProfile);
-    buttonSubmitProfile.disabled = false;
-  }
+  setSubmitButtonState(profilePopupForm, config);
 }
-
-
 
 function closePopupEdit() {
   closePopup(popupProfile);

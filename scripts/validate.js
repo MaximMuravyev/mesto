@@ -36,15 +36,17 @@ function handleSubmit(event) {
 
 function enableSubmitButton(item, config){
   item.classList.remove(config.submitButtonErrorClass);
+  item.disabled = false;
 }
 
 function disableSubmitButton(item, config){
   item.classList.add(config.submitButtonErrorClass);
+  item.disabled = true;
 }
 
 function setSubmitButtonState(form, config) {
   const button = form.querySelector(config.submitButtonSelector);
-  if (button.disabled = !form.checkValidity()) {
+  if (!form.checkValidity()) {
     disableSubmitButton(button, config);
   } else {
     enableSubmitButton(button, config);
