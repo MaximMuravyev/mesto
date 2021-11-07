@@ -48,7 +48,6 @@ const imgOpen = document.querySelector('.popup__open-img');
 const titleOpen = document.querySelector('.popup__open-title');
 const popups = document.querySelectorAll('.popup');
 const buttonSubmitPlace = document.querySelector('.popup__button_place');
-const buttonSubmitProfile = document.querySelector('.popup__button_profile');
 
 initialCards.forEach(renderCard);
 
