@@ -29,9 +29,11 @@
 @import url(../blocks/popup/__close/popup__close.css);
 @import url(../blocks/popup/__title/popup__title.css);
 @import url(../blocks/popup/__form/popup__form.css);
-@import url(../blocks/popup/__error/popup__error.css);
 @import url(../blocks/popup/__input/popup__input.css);
 @import url(../blocks/popup/__input/_invalid/popup__input_invalid.css);
+@import url(../blocks/popup/__input-error/popup__input-error.css);
+@import url(../blocks/popup/__input-error/_active/popup__input-error_active.css);
+@import url(../blocks/popup/_transition-disable/popup_transition-disable.css);
 @import url(../blocks/popup/__button/popup__button.css);
 @import url(../blocks/popup/__button/_disable/popup__button_disable.css);
 @import url(../blocks/popup/__card-container/popup__card-container.css);
@@ -40,3 +42,4 @@
 @import url(../blocks/popup/__close_open_card/popup__close_open_card.css);
 @import url(../blocks/template/template.css);
 @import url(../blocks/popup/_transition-disable/popup_transition-disable.css);
+
