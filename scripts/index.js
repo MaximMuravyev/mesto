@@ -48,7 +48,7 @@ const nameEdit = popupProfile.querySelector('.popup__input_type_name');
 const statusEdit = popupProfile.querySelector('.popup__input_type_job');
 const popups = Array.from(document.querySelectorAll('.popup'));
 
-export { imgOpen, titleOpen, cardPopupImg };
+export {cardPopupImg, imgOpen, titleOpen};
 
 export function openPopup(name) {
   name.classList.add('popup_is-open');
