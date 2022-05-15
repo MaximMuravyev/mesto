@@ -31,13 +31,8 @@ export default class FormValidator {
   }
 
   _switchButtonState() {
-    if (this._haveInvalidInput()) {
-      this._submitButton.classList.add(this._selector.inactiveButtonClass);
-      this._submitButton.setAttribute('type', 'button');
-    } else {
-      this._submitButton.classList.remove(this._selector.inactiveButtonClass);
-      this._submitButton.setAttribute('type', 'submit');
-    }
+    this._submitButton.disabled = !this._form.checkValidity();
+    this._submitButton.classList.toggle(this._selector.inactiveButtonClass, !this._form.checkValidity());
   }
 
   _checkInputValibity(input) {
