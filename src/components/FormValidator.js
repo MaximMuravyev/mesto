@@ -1,5 +1,5 @@
 export default class FormValidator {
-  constructor (data, form){
+  constructor(data, form) {
     this._selector = data;
     this._form = form;
     this._inputList = Array.from(this._form.querySelectorAll(this._selector.inputSelector));
@@ -25,8 +25,8 @@ export default class FormValidator {
   removeValidation() {
     this._switchButtonState();
     this._inputList.forEach((input) => {
-        const error = this._form.querySelector(`.${input.id}-error`);
-        this._hideInputError(input, error);
+      const error = this._form.querySelector(`.${input.id}-error`);
+      this._hideInputError(input, error);
     });
   }
 

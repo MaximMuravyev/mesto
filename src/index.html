@@ -4,19 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./pages/index.css">
   <title>Место</title>
 </head>
 
 <body class="page">
   <header class="header">
-    <img class="header__logo" src="./images/Vector.svg" alt="лого Место">
+    <img class="header__logo" src="<%=require('./images/Vector.svg')%>" alt="лого Место">
   </header>
 
   <main class="content">
     <section class="profiles">
       <div class="profile">
-        <img class="profile__avatar" src="./images/Jacques-Yves_Cousteau.png" alt="аватар профиля">
+        <img class="profile__avatar" src="<%=require('./images/Jacques-Yves_Cousteau.png')%>" alt="аватар профиля">
         <div class="profile__info">
           <div class="profile__name-content">
             <h1 class="profile__name">Жак-Ив Кусто</h1>
@@ -42,10 +41,10 @@
       <button type="button" aria-label="Закрыть" class="popup__close popup__close_edit_profile"></button>
       <h3 class="popup__title">Редактировать профиль</h3>
       <form action="/SendForm" name="edit-profile" class="popup__form popup__form_edit_profile edit-profile" novalidate>
-        <input id="name-input" required minlength="2" maxlength="40" autocomplete="off" type="text" name="profile-name"
+        <input id="name-input" required minlength="2" maxlength="40" autocomplete="off" type="text" name="name"
           class="popup__input popup__input_type_name" />
         <span class="popup__input-error name-input-error"></span>
-        <input id="info-input" required minlength="2" maxlength="200" autocomplete="off" type="text" name="profile-job"
+        <input id="info-input" required minlength="2" maxlength="200" autocomplete="off" type="text" name="job"
           class="popup__input popup__input_type_job" />
         <span class="popup__input-error info-input-error"></span>
         <button type="submit" aria-label="Отправить" class="popup__button popup__button_profile">Сохранить</button>
@@ -58,10 +57,10 @@
       <button type="button" aria-label="Закрыть" class="popup__close popup__close_add_place"></button>
       <h3 class="popup__title">Новое место</h3>
       <form action="/SendForm" name="add-photo" class="popup__form popup__form_add_place add-photo" novalidate>
-        <input id="place-input" required minlength="2" autocomplete="off" maxlength="30" type="text" name="place-name"
+        <input id="place-input" required minlength="2" autocomplete="off" maxlength="30" type="text" name="name"
           class="popup__input popup__input_type_place" placeholder="Название" />
         <span class="popup__input-error place-input-error"></span>
-        <input id="url-input" required type="url" autocomplete="off" name="place-link"
+        <input id="url-input" required type="url" autocomplete="off" name="link"
           class="popup__input popup__input_type_link" placeholder="Ссылка на картинку" />
         <span class="popup__input-error url-input-error"></span>
         <button type="submit" aria-label="Отправить" class="popup__button popup__button_place">Создать</button>
@@ -71,27 +70,23 @@
 
   <div class="popup popup_card-open popup_transition-disable">
     <div class="popup__card-container">
-      <img class="popup__open-img" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg"
+      <img class="popup__open-img" src="#"
         alt="Локация">
-      <h3 class="popup__open-title">Байкал</h3>
+      <h2 class="popup__open-title"></h2>
       <button type="button" aria-label="Закрыть" class="popup__close popup__close_open_card"></button>
     </div>
   </div>
 
   <template id="template">
     <article class="card">
-      <img class="card__image" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg"
+      <img class="card__image" src="#"
         alt="Локация">
       <div class="card__string">
-        <h2 class="card__title">Байкал</h2>
+        <h2 class="card__title"></h2>
         <button type="button" class="card__like"></button>
       </div>
       <button type="reset" aria-label="Удалить" class="card__recycle"></button>
     </article>
   </template>
-  <script type='module' src="./scripts/index.js"></script>
-  <script type='module' src="./scripts/Card.js"></script>
-  <script type='module' src="./scripts/FormValidator.js"></script>
 </body>
-
 </html>
