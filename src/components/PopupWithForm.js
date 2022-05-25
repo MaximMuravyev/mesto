@@ -9,7 +9,7 @@ export default class PopupWithForm extends Popup {
     this._submit = this._submit.bind(this);
   }
 
-  setInput(data) {
+  setInputValue(data) {
     this._inputs.forEach(input => {
       input.value = data[input.name];
     });
@@ -25,7 +25,7 @@ export default class PopupWithForm extends Popup {
     super._removeEventListeners();
   }
 
-  _getInput() {
+  _getInputValues() {
     this._inputValues = {};
     this._inputs.forEach((input) => {
       this._inputValues[input.name] = input.value;
@@ -34,7 +34,7 @@ export default class PopupWithForm extends Popup {
   }
 
   _submit() {
-    this._submitForm(this._getInput());
+    this._submitForm(this._getInputValues());
   }
 
   close() {

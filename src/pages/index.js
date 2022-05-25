@@ -61,7 +61,7 @@ enableValidation(validationConfig);
 
 buttonEdit.addEventListener('click', () => {
   editProfile.open();
-  editProfile.setInput(userInfo.getUserInfo());
+  editProfile.setInputValue(userInfo.getUserInfo());
   formValidators['edit-profile'].removeValidation();
 });
 

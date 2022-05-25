@@ -28,19 +28,19 @@ export default class Card {
     });
 
     this._buttonLike.addEventListener('click', () => {
-      this._cardLikeClick();
+      this._handleLikeClick();
     });
 
     this._element.querySelector('.card__recycle').addEventListener('click', () => {
-      this._cardDeleteClick();
+      this._handleDeleteClick();
     });
   }
 
-  _cardDeleteClick() {
+  _handleDeleteClick() {
     this._element.remove();
   }
 
-  _cardLikeClick() {
+  _handleLikeClick() {
     this._buttonLike.classList.toggle('card_like-on');
   }
 
