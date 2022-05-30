@@ -192,7 +192,12 @@ function runMyApp(userData) {
           picPopup.closePopup();
           picValidate.toggleButtonState();
         })
-        .catch((error) => alert(error));
+        .catch((error) => {
+          alert(error);
+        })
+        .finally(() => {
+          picPopup.submit.textContent = 'Сохранить'
+        })
     },
   });
   picPopup.setEventListeners();
