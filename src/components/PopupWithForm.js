@@ -8,12 +8,7 @@ export default class PopupWithForm extends Popup {
     this._profileName = document.querySelector(".profile__name");
     this._profileJob = document.querySelector(".profile__job");
     this._form = this._popup.querySelector(".popup__form");
-    this._submit = this._popup.querySelector('.popup__button');
-  }
-
-  openPopup() {
-    super.openPopup();
-    this.renderLoading(false);
+    this.submit = this._popup.querySelector('.popup__button');
   }
 
   closePopup() {
@@ -21,16 +16,16 @@ export default class PopupWithForm extends Popup {
     this._form.reset();
   }
 
-  setInputValues() {
-    this._inputList[0].value = this._profileName.textContent;
-    this._inputList[1].value = this._profileJob.textContent;
+  setInputValues(data) {
+    this._inputList[0].value = data.name;
+    this._inputList[1].value = data.about;
   }
 
   renderLoading(data) {
     if(data) {
-      this._submit.textContent = 'Сохранение...';
+      this.submit.textContent = 'Сохранение...';
     } else {
-      this._submit.textContent = 'Сохранить';
+      this.submit.textContent = 'Сохранить';
     }
   }
 

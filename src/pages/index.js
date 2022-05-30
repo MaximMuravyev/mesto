@@ -128,16 +128,20 @@ function runMyApp(userData) {
         .then(() => {
           infoForm.closePopup();
         })
-        .catch((error) => alert(error));
+        .catch((error) => { alert(error);
+        })
+        .finally(() => {
+          infoForm.submit.textContent = 'Сохранить'
+        })
     },
   });
 
   infoForm.setEventListeners();
   profileEditButton.addEventListener("click", () => {
+    infoForm.openPopup();
+    infoForm.setInputValues(userInfo.getUserInfo());
     nameValidate.clear();
     nameValidate.enableButton();
-    infoForm.openPopup();
-    infoForm.setInputValues();
   });
 
   const placeAddForm = new PopupWithForm(".popup_card_add", {
@@ -153,7 +157,12 @@ function runMyApp(userData) {
           placeAddForm.closePopup();
           formValidate.toggleButtonState();
         })
-        .catch((error) => alert(error));
+        .catch((error) => {
+          alert(error);
+        })
+        .finally(() => {
+          placeAddForm.submit.textContent = 'Сохранить'
+        })
     },
   });
 
