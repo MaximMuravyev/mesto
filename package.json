@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack serve",
+    "clean": "rd /s /q dist",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },

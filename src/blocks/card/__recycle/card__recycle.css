@@ -17,3 +17,7 @@
 .card__recycle:hover{
   opacity: 0.6;
 }
+
+.card__recycle_hidden {
+  display: none;
+}
