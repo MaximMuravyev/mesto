@@ -780,6 +780,10 @@ template {
   opacity: 0.6;
 }
 
+.card__recycle_hidden {
+  display: none;
+}
+
 .footer{
   margin: 0 200px 60px;
   padding: 0;
